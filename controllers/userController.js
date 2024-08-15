@@ -3,8 +3,10 @@ const User = require('../models/userModel');
 const userController = {
     createUser: (req, res) => {
         const newUser = {
-            username: req.body.username,
-            password: req.body.password,
+            nome: req.body.nome,
+            senha: req.body.senha,
+            data_nasc: req.body.data_nasc,
+            genero: req.body.genero,
             role: req.body.role,
         };
 
@@ -60,8 +62,10 @@ const userController = {
     updateUser: (req, res) => {
         const userId = req.params.id;
         const updatedUser = {
-            username: req.body.username,
-            password: req.body.password,
+            nome: req.body.nome,
+            senha: req.body.senha,
+            data_nasc: req.body.data_nasc,
+            genero: req.body.genero,
             role: req.body.role,
         };
 
