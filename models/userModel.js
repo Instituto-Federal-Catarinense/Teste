@@ -2,8 +2,8 @@ const db = require('../config/db');
 
 const User = {
     create: (user, callback) => {
-        const query = 'INSERT INTO users (username, password, role) VALUES (?, ?, ?)';
-        db.query(query, [user.username, user.password, user.role], (err, results) => {
+        const query = 'INSERT INTO users (nome, senha, data_nasc, genero, role) VALUES (?, ?, ?, ?, ?)';
+        db.query(query, [user.nome, user.senha, user.data_nasc, user.genero, user.role], (err, results) => {
             if (err) {
                 return callback(err);
             }
@@ -23,7 +23,7 @@ const User = {
 
     findByUsername: (username, callback) => {
         const query = 'SELECT * FROM users WHERE username = ?';
-        db.query(query, [username], (err, results) => {
+        db.query(query, [nome], (err, results) => {
             if (err) {
                 return callback(err);
             }
@@ -32,8 +32,8 @@ const User = {
     },
 
     update: (id, user, callback) => {
-        const query = 'UPDATE users SET username = ?, password = ?, role = ? WHERE id = ?';
-        db.query(query, [user.username, user.password, user.role, id], (err, results) => {
+        const query = 'UPDATE users SET nome = ?, senha = ?, data_nasc = ?, genero = ?, role = ? WHERE id = ?';
+        db.query(query, [user.nome, user.senha, user.data_nasc, user.genero, user.role, id], (err, results) => {
             if (err) {
                 return callback(err);
             }

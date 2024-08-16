@@ -1,0 +1,27 @@
+<h1>All Musics</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>nome</th>
+            <th>Role</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% musics.forEach(music => { %>
+            <tr>
+                <td><%= music.id %></td>
+                <td><%= music.nome %></td>
+                <td><%= music.role %></td>
+                <td>
+                    <a href="/musics/<%= music.id %>" class="btn btn-primary">View</a>
+                    <a href="/musics/<%= music.id %>/edit" class="btn btn-warning">Edit</a>
+                    <form action="/musics/<%= music.id %>?_method=DELETE" method="POST" style="display: inline;">
+                        <button type="submit" class="btn btn-danger">Delete</button>
+                    </form>
+                </td>
+            </tr>
+        <% }) %>
+    </tbody>
+</table>

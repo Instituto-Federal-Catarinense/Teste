@@ -3,7 +3,7 @@ const bodyParser = require('body-parser');
 const methodOverride = require('method-override');
 const expressLayouts = require('express-ejs-layouts');
 const userRoutes = require('./routes/userRoutes');
-const MusicRoutes = require('./routes/MusicRoutes');
+const musicRoutes = require('./routes/MusicRouter');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
@@ -16,6 +16,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(methodOverride('_method'));
 
 app.use('/users', userRoutes);
+app.use('/musics', musicRoutes);
 
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
