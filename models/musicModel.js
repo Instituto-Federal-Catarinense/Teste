@@ -2,8 +2,8 @@ const db = require('../config/db');
 
 const Music = {
     create: (music, callback) => {
-        const query = 'INSERT INTO musics (musicname, password, role) VALUES (?, ?, ?)';
-        db.query(query, [music.username, music.password, music.role], (err, results) => {
+        const query = 'INSERT INTO musics (duracao, genero, autores, ritmo, titulo, instru_vocal, role) VALUES (?,?,?,?,?,?,?)';
+        db.query(query, [music.duracao, music.genero, music.autores, music.ritmo, music.titulo, music.instru_vocal, music.role], (err, results) => {
             if (err) {
                 return callback(err);
             }
@@ -21,8 +21,8 @@ const Music = {
         });
     },
 
-    findByUsername: (musicname, callback) => {
-        const query = 'SELECT * FROM musics WHERE username = ?';
+    findByMusicname: (musicname, callback) => {
+        const query = 'SELECT * FROM musics WHERE musicname = ?';
         db.query(query, [musicname], (err, results) => {
             if (err) {
                 return callback(err);
@@ -32,8 +32,8 @@ const Music = {
     },
 
     update: (id, music, callback) => {
-        const query = 'UPDATE musics SET musicname = ?, password = ?, role = ? WHERE id = ?';
-        db.query(query, [music.username, music.password, music.role, id], (err, results) => {
+        const query = 'UPDATE musics SET duracao = ?, genero = ?,ritmo = ?,autores = ?,instru_vocal = ?,titulo = ?, role = ? WHERE id = ?';
+        db.query(query, [music.duracao, music.genero,music.autores,music.ritmo,music.titulo,music.instru_vocal, music.role, id], (err, results) => {
             if (err) {
                 return callback(err);
             }
