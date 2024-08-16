@@ -2,8 +2,8 @@ const db = require('../config/db');
 
 const Music = {
     create: (music, callback) => {
-        const query = 'INSERT INTO musics (duracao, genero, autores, ritmo, titulo, instru_vocal, role) VALUES (?,?,?,?,?,?,?)';
-        db.query(query, [music.duracao, music.genero, music.autores, music.ritmo, music.titulo, music.instru_vocal, music.role], (err, results) => {
+        const query = 'INSERT INTO musics (nome, duracao, genero, autores, ritmo, instru_vocal) VALUES (?,?,?,?,?,?)';
+        db.query(query, [music.nome, music.duracao, music.genero, music.autores, music.ritmo, music.instru_vocal], (err, results) => {
             if (err) {
                 return callback(err);
             }
@@ -32,8 +32,8 @@ const Music = {
     },
 
     update: (id, music, callback) => {
-        const query = 'UPDATE musics SET duracao = ?, genero = ?,ritmo = ?,autores = ?,instru_vocal = ?,titulo = ?, role = ? WHERE id = ?';
-        db.query(query, [music.duracao, music.genero,music.autores,music.ritmo,music.titulo,music.instru_vocal, music.role, id], (err, results) => {
+        const query = 'UPDATE musics SET nome = ?, duracao = ?, genero = ?,ritmo = ?,autores = ?,instru_vocal = ?, WHERE id = ?';
+        db.query(query, [music.nome, music.duracao, music.genero,music.autores,music.ritmo,music.instru_vocal, id], (err, results) => {
             if (err) {
                 return callback(err);
             }

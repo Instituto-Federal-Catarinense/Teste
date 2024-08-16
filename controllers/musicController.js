@@ -7,7 +7,6 @@ const musicController = {
             genero: req.body.genero,
             autores: req.body.autores,
             ritmo: req.body.ritmo,
-            titulo: req.bory.titulo,
             role: req.body.role,
         };
 
@@ -67,7 +66,6 @@ const musicController = {
             genero: req.body.genero,
             autores: req.body.autores,
             ritmo: req.body.ritmo,
-            titulo: req.bory.titulo,
             role: req.body.role,
         };
 

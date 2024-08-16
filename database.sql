@@ -13,11 +13,10 @@ CREATE TABLE users (
 
 CREATE TABLE musics (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    duracao INT,
-    genero INT,
+    nome VARCHAR(255),
+    duracao FLOAT,
+    genero VARCHAR(255),
     autores VARCHAR(30), 
-    ritmo INT,
-    titulo VARCHAR(45),
-    instru_vocal VARCHAR(30),
-    role ENUM('admin', 'user') NOT NULL
+    ritmo VARCHAR(30),
+    instru_vocal VARCHAR(30)
 );

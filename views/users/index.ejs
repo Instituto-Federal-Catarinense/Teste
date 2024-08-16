@@ -3,7 +3,7 @@
     <thead>
         <tr>
             <th>ID</th>
-            <th>Username</th>
+            <th>Nome</th>
             <th>Role</th>
             <th>Actions</th>
         </tr>
@@ -12,7 +12,7 @@
         <% users.forEach(user => { %>
             <tr>
                 <td><%= user.id %></td>
-                <td><%= user.username %></td>
+                <td><%= user.nome %></td>
                 <td><%= user.role %></td>
                 <td>
                     <a href="/users/<%= user.id %>" class="btn btn-primary">View</a>

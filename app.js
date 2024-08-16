@@ -3,8 +3,8 @@ const bodyParser = require('body-parser');
 const methodOverride = require('method-override');
 const expressLayouts = require('express-ejs-layouts');
 const userRoutes = require('./routes/userRoutes');
-const indexRoutes = require('./routes/indexRoutes');
-const musicRoutes = require('./routes/MusicRouter');
+const indexRoutes = require('./routes/indexRouter');
+const musicRoutes = require('./routes/musicRouter');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
