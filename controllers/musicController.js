@@ -25,10 +25,10 @@ const musicController = {
             if (err) {
                 return res.status(500).json({ error: err });
             }
-            if (!user) {
-                return res.status(404).json({ message: 'music not found' });
+            if (!music) {
+                return res.status(404).json({ message: 'Music not found' });
             }
-            res.render('musics/show', { user });
+            res.render('musics/show', { music });
         });
     },
 
@@ -37,7 +37,7 @@ const musicController = {
             if (err) {
                 return res.status(500).json({ error: err });
             }
-            res.render('musics/index', { music });
+            res.render('musics/index', { music: musics });
         });
     },
 
@@ -69,7 +69,7 @@ const musicController = {
             role: req.body.role,
         };
 
-        User.update(musicId, updatedUser, (err) => {
+        Music.update(musicId, updatedMusic, (err) => {
             if (err) {
                 return res.status(500).json({ error: err });
             }
@@ -80,7 +80,7 @@ const musicController = {
     deleteMusic: (req, res) => {
         const musicId = req.params.id;
 
-        Music.delete(userId, (err) => {
+        Music.delete(musicId, (err) => {
             if (err) {
                 return res.status(500).json({ error: err });
             }

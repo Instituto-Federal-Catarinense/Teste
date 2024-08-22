@@ -1,23 +1,31 @@
-<h1>All Musics</h1>
+<h1>Todas as Músicas</h1>
 <table class="table">
     <thead>
         <tr>
             <th>ID</th>
-            <th>nome</th>
-            <th>Role</th>
+            <th>Nome</th>
+            <th>Duração</th>
+            <th>Gênero</th>
+            <th>Autores</th>
+            <th>Ritmo</th>
+            <th>Instrumental e Vocal</th>
             <th>Actions</th>
         </tr>
     </thead>
     <tbody>
-        <% musics.forEach(music => { %>
+        <% musics.forEach(item => { %>
             <tr>
-                <td><%= music.id %></td>
-                <td><%= music.nome %></td>
-                <td><%= music.role %></td>
+                <td><%= item.id %></td>
+                <td><%= item.nome %></td>
+                <td><%= item.duracao %></td>
+                <td><%= item.genero %></td>
+                <td><%= item.autores %></td>
+                <td><%= item.ritmo %></td>
+                <td><%= item.instru_vocal %></td>
                 <td>
-                    <a href="/musics/<%= music.id %>" class="btn btn-primary">View</a>
-                    <a href="/musics/<%= music.id %>/edit" class="btn btn-warning">Edit</a>
-                    <form action="/musics/<%= music.id %>?_method=DELETE" method="POST" style="display: inline;">
+                    <a href="/musics/<%= item.id %>" class="btn btn-primary">View</a>
+                    <a href="/musics/<%= item.id %>/edit" class="btn btn-warning">Edit</a>
+                    <form action="/musics/<%= item.id %>?_method=DELETE" method="POST" style="display: inline;">
                         <button type="submit" class="btn btn-danger">Delete</button>
                     </form>
                 </td>
