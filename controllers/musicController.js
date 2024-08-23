@@ -3,11 +3,12 @@ const Music = require('../models/musicModel');
 const musicController = {
     createMusic: (req, res) => {
         const newMusic = {
+            nome: req.body.nome,
             duracao: req.body.duracao,
             genero: req.body.genero,
             autores: req.body.autores,
             ritmo: req.body.ritmo,
-            role: req.body.role,
+            instru_vocal: req.body.instru_vocal,
         };
 
         Music.create(newMusic, (err, musicId) => {
@@ -37,7 +38,7 @@ const musicController = {
             if (err) {
                 return res.status(500).json({ error: err });
             }
-            res.render('musics/index', { music: musics });
+            res.render('musics/index', { musics });
         });
     },
 
@@ -62,11 +63,12 @@ const musicController = {
     updateMusic: (req, res) => {
         const musicId = req.params.id;
         const updatedMusic = {
+            nome: req.body.nome,
             duracao: req.body.duracao,
             genero: req.body.genero,
             autores: req.body.autores,
             ritmo: req.body.ritmo,
-            role: req.body.role,
+            instru_vocal: req.body.instru_vocal,
         };
 
         Music.update(musicId, updatedMusic, (err) => {

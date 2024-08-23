@@ -4,8 +4,9 @@
         <tr>
             <th>ID</th>
             <th>Nome</th>
-            <th>Role</th>
-            <th>Actions</th>
+            <th>Gênero</th>
+            <th>Tipo</th>
+            <th></th>
         </tr>
     </thead>
     <tbody>
@@ -13,12 +14,13 @@
             <tr>
                 <td><%= user.id %></td>
                 <td><%= user.nome %></td>
+                <td><%= user.genero %></td>
                 <td><%= user.role %></td>
                 <td>
-                    <a href="/users/<%= user.id %>" class="btn btn-primary">View</a>
-                    <a href="/users/<%= user.id %>/edit" class="btn btn-warning">Edit</a>
+                    <a href="/users/<%= user.id %>" class="btn btn-primary">Visualizar</a>
+                    <a href="/users/<%= user.id %>/edit" class="btn btn-warning">Editar</a>
                     <form action="/users/<%= user.id %>?_method=DELETE" method="POST" style="display: inline;">
-                        <button type="submit" class="btn btn-danger">Delete</button>
+                        <button type="submit" class="btn btn-danger">Deletar</button>
                     </form>
                 </td>
             </tr>

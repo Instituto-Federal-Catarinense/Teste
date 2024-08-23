@@ -1,4 +1,4 @@
-<h1>Edit Music</h1>
+<h1>Edição de Música</h1>
 <form action="/musics/<%= music.id %>?_method=PUT" method="POST">
     <div class="form-group">
         <label for="nome">Nome:</label>
@@ -24,5 +24,5 @@
         <label for="instru_vocal">Instrumental e Vocal:</label>
         <input type="text" class="form-control" id="instru_vocal" name="instru_vocal" value="<%= music.instru_vocal %>" required>
     </div>
-    <button type="submit" class="btn btn-warning">Update</button>
+    <button type="submit" class="btn btn-warning">Editar</button>
 </form>

@@ -9,7 +9,6 @@
             <th>Autores</th>
             <th>Ritmo</th>
             <th>Instrumental e Vocal</th>
-            <th>Actions</th>
         </tr>
     </thead>
     <tbody>
@@ -23,10 +22,10 @@
                 <td><%= item.ritmo %></td>
                 <td><%= item.instru_vocal %></td>
                 <td>
-                    <a href="/musics/<%= item.id %>" class="btn btn-primary">View</a>
-                    <a href="/musics/<%= item.id %>/edit" class="btn btn-warning">Edit</a>
+                    <a href="/musics/<%= item.id %>" class="btn btn-primary">Vizualizar</a>
+                    <a href="/musics/<%= item.id %>/edit" class="btn btn-warning">Editar</a>
                     <form action="/musics/<%= item.id %>?_method=DELETE" method="POST" style="display: inline;">
-                        <button type="submit" class="btn btn-danger">Delete</button>
+                        <button type="submit" class="btn btn-danger">Deletar</button>
                     </form>
                 </td>
             </tr>
