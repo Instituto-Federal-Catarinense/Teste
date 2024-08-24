@@ -14,7 +14,7 @@ CREATE TABLE users (
 CREATE TABLE musics (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(255),
-    duracao FLOAT,
+    duracao time,
     genero VARCHAR(255),
     autores VARCHAR(30), 
     ritmo VARCHAR(30),

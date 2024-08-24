@@ -1,24 +1,80 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-secondary">
-    <a class="navbar-brand" href="/">Início</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-            <!-- Seção de Usuários -->
-            <li class="nav-item">
-                <a class="nav-link" href="/users">Usuários</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/users/new">Criar Usuário</a>
-            </li>
-            <!-- Seção de Músicas -->
-            <li class="nav-item">
-                <a class="nav-link" href="/musics">Músicas</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/musics/new">Criar Música</a>
-            </li>
-        </ul>
-    </div>
-</nav>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar</title>
+    <style>
+        .navbar {
+            padding: 10px 20px;
+            background-color: #6c757d; /* bg-secondary */
+        }
+
+        .navbar-brand {
+            color: #fff;
+            font-size: 24px;
+            text-decoration: none;
+        }
+
+        .navbar-brand:hover {
+            color: #dcdcdc;
+        }
+
+        .navbar-toggler {
+            border-color: #dcdcdc;
+        }
+
+        .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%2870,70,70,0.7%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+        }
+
+        .navbar-nav {
+            margin-left: auto;
+        }
+
+        .nav-item {
+            margin-left: 15px;
+        }
+
+        .nav-link {
+            color: #fff;
+            font-size: 18px;
+            text-decoration: none;
+        }
+
+        .nav-link:hover {
+            color: #dcdcdc;
+        }
+
+        .collapse {
+            justify-content: flex-end;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-secondary">
+        <a class="navbar-brand" href="/">Início</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <!-- Seção de Usuários -->
+                <li class="nav-item">
+                    <a class="nav-link" href="/users">Usuários</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/users/new">Criar Usuário</a>
+                </li>
+                <!-- Seção de Músicas -->
+                <li class="nav-item">
+                    <a class="nav-link" href="/musics">Músicas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/musics/new">Criar Música</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</body>
+</html>

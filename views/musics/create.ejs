@@ -1,28 +1,111 @@
-<h1>Criando Novas Músicas</h1>
-<form action="/musics" method="POST">
-    <div class="form-group">
-        <label for="nome">Nome:</label>
-        <input type="text" class="form-control" id="nome" name="nome" required>
-    </div>
-    <div class="form-group">
-        <label for="genero">Gênero:</label>
-        <input type="text" class="form-control" id="genero" name="genero" required>
-    </div>
-    <div class="form-group">
-        <label for="duracao">Duração:</label>
-        <input type="text" class="form-control" id="duracao" name="duracao" required>
-    </div>
-    <div class="form-group">
-        <label for="autores">Autores:</label>
-        <input type="text" class="form-control" id="autores" name="autores" required>
-    </div>
-    <div class="form-group">
-        <label for="ritmo">Ritmo:</label>
-        <input type="text" class="form-control" id="ritmo" name="ritmo" required>
-    </div>
-    <div class="form-group">
-        <label for="instru_vocal">Instrumental e Vocal:</label>
-        <input type="text" class="form-control" id="instru_vocal" name="instru_vocal" required>
-    </div>
-    <button type="submit" class="btn btn-primary">Criar</button>
-</form>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criando Novas Músicas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+
+        }
+
+        h1 {
+            text-align: center; 
+            color: #333;
+            margin-bottom: 30px;
+            margin-top: 15px;
+        }
+
+        .formulario1 {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            border-color: #66afe9;
+            outline: none;
+            box-shadow: 0 0 5px rgba(102, 175, 233, 0.6);
+        }
+
+        button.btn-primary {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button.btn-primary:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Criando Novas Músicas</h1>
+    <form action="/musics" method="POST" class="formulario1">
+        <div class="form-group">
+            <label for="nome">Nome:</label>
+            <input type="text" class="form-control" id="nome" name="nome" required>
+        </div>
+        <div class="form-group">
+            <label for="genero">Gênero:</label>
+            <input type="text" class="form-control" id="genero" name="genero" required>
+        </div>
+        <div class="form-group">
+            <label for="duracao">Duração:</label>
+            <input type="time" class="form-control" id="duracao" name="duracao" required>
+        </div>
+        <div class="form-group">
+            <label for="autores">Autores:</label>
+            <input type="text" class="form-control" id="autores" name="autores" required>
+        </div>
+        <div class="form-group">
+            <label for="role">Ritmo:</label>
+            <select class="form-control" id="ritmo" name="ritmo" required>
+                <option value="Acelerado">Acelerado</option>
+                <option value="Médio">Médio</option>
+                <option value="Lento">Lento</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="role">Instrumental e Vocal:</label>
+            <select class="form-control" id="instru_vocal" name="instru_vocal" required>
+                <option value="inztrumental">Instrumental</option>
+                <option value="vocal">Vocal</option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Criar</button>
+    </form>
+</body>
+</html>
