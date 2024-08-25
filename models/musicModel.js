@@ -25,7 +25,7 @@ const Music = {
 
     // Atualizar uma música
     update: (id, music, callback) => {
-        const query = 'UPDATE musics SET nome = ?, duracao = ?, genero = ?, ritmo = ?, autores = ?, instru_vocal = ? WHERE id = ?';
+        const query = 'UPDATE musics SET nome = ?, duracao = ?, genero = ?, autores = ?, ritmo = ?, instru_vocal = ? WHERE id = ?';
         db.query(query, [music.nome, music.duracao, music.genero, music.autores, music.ritmo, music.instru_vocal, id], (err, results) => {
             if (err) {
                 return callback(err);

@@ -6,7 +6,7 @@
     </div>
     <div class="form-group">
         <label for="duracao">Duração:</label>
-        <input type="text" class="form-control" id="duracao" name="duracao" value="<%= music.duracao %>" required>
+        <input type="time" class="form-control" id="duracao" name="duracao" value="<%= music.duracao %>" required>
     </div>
     <div class="form-group">
         <label for="genero">Gênero:</label>
@@ -18,11 +18,19 @@
     </div>
     <div class="form-group">
         <label for="ritmo">Ritmo:</label>
-        <input type="text" class="form-control" id="ritmo" name="ritmo" value="<%= music.ritmo %>" required>
+        <select class="form-control" id="ritmo" name="ritmo" required>
+            <option value="Acelerado" <%= music.ritmo === 'Acelerado' ? 'selected' : '' %>>Acelerado</option>
+            <option value="Médio" <%= music.ritmo === 'Médio' ? 'selected' : '' %>>Médio</option>
+            <option value="Lento" <%= music.ritmo === 'Lento' ? 'selected' : '' %>>Lento</option>
+        </select>
     </div>
     <div class="form-group">
         <label for="instru_vocal">Instrumental e Vocal:</label>
-        <input type="text" class="form-control" id="instru_vocal" name="instru_vocal" value="<%= music.instru_vocal %>" required>
+        <select class="form-control" id="instru_vocal" name="instru_vocal" required>
+            <option value="instrumental" <%= music.instru_vocal === 'instrumental' ? 'selected' : '' %>>Instrumental</option>
+            <option value="vocal" <%= music.instru_vocal === 'vocal' ? 'selected' : '' %>>Vocal</option>
+            <option value="instrumental e Vocal" <%= music.instru_vocal === 'instrumental e Vocal' ? 'selected' : '' %>>Instrumental & Vocal</option>
+        </select>
     </div>
     <button type="submit" class="btn btn-warning">Editar</button>
 </form>

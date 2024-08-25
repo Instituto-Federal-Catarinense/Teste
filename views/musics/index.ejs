@@ -1,14 +1,11 @@
-<h1>Todas as Músicas</h1>
+<h1>Músicas</h1>
 <table class="table">
     <thead>
         <tr>
             <th>ID</th>
             <th>Nome</th>
-            <th>Duração</th>
-            <th>Gênero</th>
             <th>Autores</th>
-            <th>Ritmo</th>
-            <th>Instrumental e Vocal</th>
+            <th></th>
         </tr>
     </thead>
     <tbody>
@@ -16,11 +13,7 @@
             <tr>
                 <td><%= item.id %></td>
                 <td><%= item.nome %></td>
-                <td><%= item.duracao %></td>
-                <td><%= item.genero %></td>
                 <td><%= item.autores %></td>
-                <td><%= item.ritmo %></td>
-                <td><%= item.instru_vocal %></td>
                 <td>
                     <a href="/musics/<%= item.id %>" class="btn btn-primary">Vizualizar</a>
                     <a href="/musics/<%= item.id %>/edit" class="btn btn-warning">Editar</a>
