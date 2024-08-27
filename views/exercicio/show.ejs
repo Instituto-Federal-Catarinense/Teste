@@ -1,0 +1,13 @@
+<h1>Detalhes do Exercício</h1>
+<p>ID: <%= exercicio.id %></p>
+<p>Nome: <%= exercicio.nome %></p>
+<p>Duração Média: <%= exercicio.duracao_media %></p>
+<p>Séries: <%= exercicio.series %></p>
+<p>Repetições: <%= exercicio.repeticao %></p>
+<p>Restrições: <%= exercicio.restricao %></p>
+<p>Aplicabilidade: <%= exercicio.aplicabilidade %></p>
+<p>Descrição: <%= exercicio.descricao %></p>
+<p>Categoria: <%= exercicio.categoria ? 'Sim' : 'Não' %></p>
+<p>Observações: <%= exercicio.obs %></p>
+<a href="/exercicios/<%= exercicio.id %>/edit" class="btn btn-warning">Editar</a>
+<a href="/exercicios" class="btn btn-secondary">Voltar</a>

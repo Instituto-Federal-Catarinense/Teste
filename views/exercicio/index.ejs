@@ -1,0 +1,31 @@
+<h1>Exercícios</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Séries</th>
+            <th>Repetições</th>
+            <th>Categoria</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <% exercicios.forEach(item => { %>
+            <tr>
+                <td><%= item.id %></td>
+                <td><%= item.nome %></td>
+                <td><%= item.series %></td>
+                <td><%= item.repeticao %></td>
+                <td><%= item.categoria ? 'Sim' : 'Não' %></td>
+                <td>
+                    <a href="/exercicios/<%= item.id %>" class="btn btn-primary">Visualizar</a>
+                    <a href="/exercicios/<%= item.id %>/edit" class="btn btn-warning">Editar</a>
+                    <form action="/exercicios/<%= item.id %>?_method=DELETE" method="POST" style="display: inline;">
+                        <button type="submit" class="btn btn-danger">Deletar</button>
+                    </form>
+                </td>
+            </tr>
+        <% }) %>
+    </tbody>
+</table>

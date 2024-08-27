@@ -5,9 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Navbar</title>
     <style>
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         .navbar {
+            width: 100%;
             padding: 10px 20px;
             background-color: #6c757d; /* bg-secondary */
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
         }
 
         .navbar-brand {
@@ -30,6 +41,8 @@
 
         .navbar-nav {
             margin-left: auto;
+            display: flex;
+            align-items: center;
         }
 
         .nav-item {
@@ -48,6 +61,12 @@
 
         .collapse {
             justify-content: flex-end;
+        }
+
+        /* Para garantir que o conteúdo abaixo da navbar não fique escondido */
+        .content {
+            margin-top: 60px; /* Ajuste conforme a altura da navbar */
+            padding: 20px;
         }
     </style>
 </head>
@@ -73,8 +92,19 @@
                 <li class="nav-item">
                     <a class="nav-link" href="/musics/new">Criar Música</a>
                 </li>
+                <!-- Seção de Exercícios -->
+                <li class="nav-item">
+                    <a class="nav-link" href="/exercicios">Exercícios</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/exercicios/new">Criar Exercício</a>
+                </li>
             </ul>
         </div>
     </nav>
+    
+    <div class="content">
+        <!-- Conteúdo da página -->
+    </div>
 </body>
 </html>

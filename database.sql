@@ -20,3 +20,16 @@ CREATE TABLE musics (
     ritmo VARCHAR(30),
     instru_vocal VARCHAR(30)
 );
+
+CREATE TABLE exercicio (
+    id INT AUTO_INCREMENT PRIMARY KEY, 
+    duracao_media time, 
+    series int,
+    repeticao int,
+    restricao varchar(100),
+    aplicabilidade varchar(100),
+    descricao varchar(100),
+    nome varchar(30),
+    categoria bit,
+    obs varchar(100)
+);
