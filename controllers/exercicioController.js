@@ -32,7 +32,7 @@ const exercicioController = {
             if (!exercicio) {
                 return res.status(404).json({ message: 'Exercício não encontrado' });
             }
-            res.render('exercicios/show', { exercicio });
+            res.render('exercicio/show', { exercicio });
         });
     },
 
@@ -41,12 +41,12 @@ const exercicioController = {
             if (err) {
                 return res.status(500).json({ error: err });
             }
-            res.render('exercicios/index', { exercicios });
+            res.render('exercicio/index', { exercicios });
         });
     },
 
     renderCreateForm: (req, res) => {
-        res.render('exercicios/create');
+        res.render('exercicio/create');
     },
 
     renderEditForm: (req, res) => {
@@ -59,7 +59,7 @@ const exercicioController = {
             if (!exercicio) {
                 return res.status(404).json({ message: 'Exercício não encontrado' });
             }
-            res.render('exercicios/edit', { exercicio });
+            res.render('exercicio/edit', { exercicio });
         });
     },
 
@@ -81,7 +81,7 @@ const exercicioController = {
             if (err) {
                 return res.status(500).json({ error: err });
             }
-            res.redirect('/exercicios');
+            res.redirect('/exercicio');
         });
     },
 
@@ -92,7 +92,7 @@ const exercicioController = {
             if (err) {
                 return res.status(500).json({ error: err });
             }
-            res.redirect('/exercicios');
+            res.redirect('/exercicio');
         });
     },
 };

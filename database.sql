@@ -21,15 +21,15 @@ CREATE TABLE musics (
     instru_vocal VARCHAR(30)
 );
 
-CREATE TABLE exercicio (
+CREATE TABLE exercicios (
     id INT AUTO_INCREMENT PRIMARY KEY, 
     duracao_media time, 
     series int,
     repeticao int,
-    restricao varchar(100),
-    aplicabilidade varchar(100),
-    descricao varchar(100),
+    restricao varchar(300),
+    aplicabilidade varchar(300),
+    descricao varchar(300),
     nome varchar(30),
-    categoria bit,
-    obs varchar(100)
+    categoria varchar(300),
+    obs varchar(300)
 );
