@@ -3,13 +3,12 @@ const db = require('../config/db');
 const Exercicios = {
     // Criar um novo exercício
     create: (exercicio, callback) => {
-        const query = 'INSERT INTO exercicios (duracao_media, series, repeticao, restricao, aplicabilidade, descricao, nome, categoria, obs) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)';
+        const query = 'INSERT INTO exercicios (duracao_media, series, repeticao, restricao, descricao, nome, categoria, obs) VALUES (?, ?, ?, ?, ?, ?, ?, ?)';
         db.query(query, [
             exercicio.duracao_media,
             exercicio.series,
             exercicio.repeticao,
             exercicio.restricao,
-            exercicio.aplicabilidade,
             exercicio.descricao,
             exercicio.nome,
             exercicio.categoria,
@@ -35,13 +34,12 @@ const Exercicios = {
 
     // Atualizar um exercício
     update: (id, exercicio, callback) => {
-        const query = 'UPDATE exercicios SET duracao_media = ?, series = ?, repeticao = ?, restricao = ?, aplicabilidade = ?, descricao = ?, nome = ?, categoria = ?, obs = ? WHERE id = ?';
+        const query = 'UPDATE exercicios SET duracao_media = ?, series = ?, repeticao = ?, restricao = ?, descricao = ?, nome = ?, categoria = ?, obs = ? WHERE id = ?';
         db.query(query, [
             exercicio.duracao_media,
             exercicio.series,
             exercicio.repeticao,
             exercicio.restricao,
-            exercicio.aplicabilidade,
             exercicio.descricao,
             exercicio.nome,
             exercicio.categoria,

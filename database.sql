@@ -27,7 +27,6 @@ CREATE TABLE exercicios (
     series int,
     repeticao int,
     restricao varchar(300),
-    aplicabilidade varchar(300),
     descricao varchar(300),
     nome varchar(30),
     categoria varchar(300),
