@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Bebas+Neue&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: linear-gradient(#322daa, #6462eb, #322daa);
+    font-family: "Abel", sans-serif;
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.596);
+    display: flex;
+    justify-content: space-between;
+}
+
+ul {
+    margin: 10px;
+    margin-left: 8vw;
+    margin-right: 8vw;
+    display: flex;
+    align-items: center;
+}
+
+.cabeca {
+    text-decoration: none;
+    color: white;
+    margin: 10px;
+    font-size: 19px;
+    font-family: "Bebas Neue";
+}
+
+a:hover {
+    color: rgb(69, 253, 253);
+    transition: 0.4s;
+}
+
+
+#logo {
+    width: 70px;
+    height: auto;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+}
+
+.titulo {
+    margin-top: 125px;
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    text-shadow: 2px 2px 2px #000d85;
+}
+
+.barra {
+    margin-top: 30vh;
+    margin-bottom: 10vh;
+    width: 60vw;
+    background-color: #000d854f;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    transition: background-color 1s ease;
+    padding: 15px;
+}
+
+.barra:hover {
+    background-color: #000d85;
+}
+
+.icons{
+    margin-left: 4vw;
+    margin-right: 4vw;
+}
+
+.comp {
+    text-decoration: none;
+    color: white;
+}
+
+.comp p {
+    text-align: center;
+}
+
+.component {
+    width: 50px;
+    height: 50px;
+    border-radius: 100px;
+    outline: 2px solid transparent; 
+    transition: outline-color 0.2s ease;
+    box-sizing: border-box;
+}
+
+.component:hover {
+    outline: 2px solid rgb(160, 255, 255);
+    padding: 2px;
+}
+
+
+footer {
+    background-color: rgba(0, 0, 0, 0.596);
+    display: flex;
+    justify-content: end;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+.foot {
+    margin-right: 8vw;
+}
+
+#redes {
+    width: 50px;
+    height: auto;
+    margin-left: 20px;
+}
+
+#sobreNos {
+    background-color: #000d85; /* fundo semitransparente */
+    padding: 50px;
+    font-size: 18px; /* ajuste conforme necessário */
+    text-align: center;
+    border-radius: 10px;
+    margin-top: 100px;
+    margin-bottom: 150px;
+    box-shadow: -8px 8px 4px #000d8583;
+    color: white;
+}
+
+#form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+    margin-bottom: 150px;
+    background-color: #000d85;
+}
+
+#form form {
+    padding: 30px;
+
+}
